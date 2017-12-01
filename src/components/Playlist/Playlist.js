@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "./Playlist.css";
 import TrackList from '../TrackList/TrackList.js';
 
-export class Playlist extends React.Component {
+export class Playlist extends Component {
+
   render() {
     return (
       <div className="Playlist">
