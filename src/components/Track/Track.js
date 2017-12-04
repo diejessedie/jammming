@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Track.css";
 
 class Track extends Component {
-0
+
   constructor(props) {
     super(props);
     this.addtrack = this.addtrack.bind(this);
