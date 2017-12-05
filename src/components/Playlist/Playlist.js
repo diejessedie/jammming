@@ -9,6 +9,12 @@ class Playlist extends Component {
     this.handleNameChange = this.handleNameChange.bind(this);
   }
 
+  handleNameChange(event) {
+    this.setState({
+      name: event.target.value
+    });
+  }
+
   render() {
     return (
       <div className="Playlist">
@@ -21,12 +27,6 @@ class Playlist extends Component {
         <a className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</a>
       </div>
     );
-  }
-
-  handleNameChange(event) {
-    this.setState({
-      name: event.target.value
-    });
   }
 }
 
