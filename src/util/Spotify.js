@@ -53,8 +53,9 @@ const Spotify = {
              return;
          }
 
+         const accessToken = this.getAccessToken();
          const headers = {
-             'Authorization': 'Bearer ' + accessToken
+             Authorization: `Bearer ${accessToken}`
          };
          let userId;
          fetch('https://cors-anywhere.herokuapp.com/' + 'https://api.spotify.com/v1/me', {headers: headers})
@@ -83,10 +84,10 @@ const Spotify = {
                      method: 'POST',
                      headers: headers,
                      body: JSON.stringify({uris: trackURIs})
-                 })
-             })
+                 });
+             });
 
-         })
+         });
      }
 
  };
