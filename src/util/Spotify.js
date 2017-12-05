@@ -1,6 +1,6 @@
 let accessToken;
 const client_id = '066245d772114cb68fef842c09a0ec96';
-const redirect_uri = 'http://localhost:3000/callback';
+const redirect_uri = 'http://jammmingproj.surge.sh';
 
 //Create a Spotify Module
 const Spotify = {
