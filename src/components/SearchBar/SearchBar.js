@@ -18,12 +18,6 @@ class SearchBar extends Component {
     }
   }
 
-  handleKeyPress(event) {
-    if (event.keyCode === 13) {
-      this.search();
-    }
-  }
-
   handleTermChange(event) {
     this.setState({
       term: event.target.value
@@ -37,7 +31,7 @@ class SearchBar extends Component {
           placeholder="Enter A Song, Album, or Artist"
           onChange={this.handleTermChange}
         />
-        <a onClick={this.search} onKeyPress={this.handleKeyPress}>
+        <a onClick={this.search}>
           SEARCH
         </a>
       </div>
