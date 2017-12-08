@@ -4,9 +4,12 @@ import "./SearchBar.css";
 class SearchBar extends Component {
   constructor(props) {
     super(props);
+<<<<<<< HEAD
     this.state = {
       term: ""
     };
+=======
+>>>>>>> parent of eb221b2... reset savePlaylist state, initialize search term state
     this.search = this.search.bind(this);
     this.handleTermChange = this.handleTermChange.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
