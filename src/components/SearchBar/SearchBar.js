@@ -18,16 +18,16 @@ class SearchBar extends Component {
     }
   }
 
+  handleKeyPress(event) {
+    if (event.key === 13) {
+      this.search();
+    }
+  }
+
   handleTermChange(event) {
     this.setState({
       term: event.target.value
     });
-  }
-
-  handleKeyPress(e) {
-    if (e.key === `Enter`) {
-      this.search();
-    }
   }
 
   render() {
@@ -38,7 +38,9 @@ class SearchBar extends Component {
           onChange={this.handleTermChange}
           onKeyPress={this.handleKeyPress}
         />
-        <a onClick={this.search}>SEARCH</a>
+        <a onClick={this.search} onKeyPress={this.handleKeyPress}>
+          SEARCH
+        </a>
       </div>
     );
   }
