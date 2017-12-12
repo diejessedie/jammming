@@ -4,12 +4,9 @@ import "./SearchBar.css";
 class SearchBar extends Component {
   constructor(props) {
     super(props);
-<<<<<<< HEAD
     this.state = {
       term: ""
     };
-=======
->>>>>>> parent of eb221b2... reset savePlaylist state, initialize search term state
     this.search = this.search.bind(this);
     this.handleTermChange = this.handleTermChange.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
@@ -22,8 +19,10 @@ class SearchBar extends Component {
   }
 
   handleKeyPress(event) {
-    if (event.key === 13) {
-      this.search();
+    if (event.key === `enter`) {
+      //this.search();
+      alert("fak");
+      event.preventDefault();
     }
   }
 
@@ -35,16 +34,16 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="SearchBar">
+      <form className="SearchBar">
         <input
           placeholder="Enter A Song, Album, or Artist"
           onChange={this.handleTermChange}
           onKeyPress={this.handleKeyPress}
         />
-        <a onClick={this.search} onKeyPress={this.handleKeyPress}>
+        <button type="submit" onClick={this.search} onkeydown={this.handleKeyPress}>
           SEARCH
-        </a>
-      </div>
+        </button>
+      </form>
     );
   }
 }
